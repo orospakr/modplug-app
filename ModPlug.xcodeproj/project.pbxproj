@@ -48,6 +48,7 @@
 		49DBB91E23921E2A00EBC759 /* load_mt2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB8FC23921E2A00EBC759 /* load_mt2.cpp */; };
 		49DBB92323921F3F00EBC759 /* libmodplug in Resources */ = {isa = PBXBuildFile; fileRef = 49DBB92223921F3F00EBC759 /* libmodplug */; };
 		49DBB9262392262300EBC759 /* DEADLOCK.XM in Resources */ = {isa = PBXBuildFile; fileRef = 49DBB9252392256800EBC759 /* DEADLOCK.XM */; };
+		49DBB9282392F95300EBC759 /* ModPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9272392F95300EBC759 /* ModPlug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		49DBB92223921F3F00EBC759 /* libmodplug */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libmodplug; sourceTree = "<group>"; };
 		49DBB9242392201C00EBC759 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		49DBB9252392256800EBC759 /* DEADLOCK.XM */ = {isa = PBXFileReference; lastKnownFileType = file; path = DEADLOCK.XM; sourceTree = "<group>"; };
+		49DBB9272392F95300EBC759 /* ModPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModPlug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				49DBB8CF23921D6200EBC759 /* Info.plist */,
 				49DBB8D023921D6200EBC759 /* ModPlug.entitlements */,
 				49DBB8C923921D6200EBC759 /* Preview Content */,
+				49DBB9272392F95300EBC759 /* ModPlug.swift */,
 			);
 			path = ModPlug;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				49DBB90E23921E2A00EBC759 /* load_ams.cpp in Sources */,
 				49DBB8FD23921E2A00EBC759 /* load_s3m.cpp in Sources */,
 				49DBB90823921E2A00EBC759 /* snd_fx.cpp in Sources */,
+				49DBB9282392F95300EBC759 /* ModPlug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
