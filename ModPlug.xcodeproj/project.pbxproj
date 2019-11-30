@@ -98,8 +98,8 @@
 		49DBB8FC23921E2A00EBC759 /* load_mt2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_mt2.cpp; sourceTree = "<group>"; };
 		49DBB91F23921EB600EBC759 /* it_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = it_defs.h; sourceTree = "<group>"; };
 		49DBB92023921EB600EBC759 /* sndfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sndfile.h; sourceTree = "<group>"; };
-		49DBB92123921EB600EBC759 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		49DBB92223921F3F00EBC759 /* libmodplug */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libmodplug; sourceTree = "<group>"; };
+		49DBB9242392201C00EBC759 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +155,10 @@
 		49DBB8D623921DE900EBC759 /* libmodplug */ = {
 			isa = PBXGroup;
 			children = (
+				49DBB9242392201C00EBC759 /* stdafx.h */,
 				49DBB92223921F3F00EBC759 /* libmodplug */,
 				49DBB91F23921EB600EBC759 /* it_defs.h */,
 				49DBB92023921EB600EBC759 /* sndfile.h */,
-				49DBB92123921EB600EBC759 /* stdafx.h */,
 				49DBB8EA23921E2900EBC759 /* fastmix.cpp */,
 				49DBB8DE23921E2900EBC759 /* load_669.cpp */,
 				49DBB8F523921E2A00EBC759 /* load_abc.cpp */,
@@ -458,6 +458,12 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DHAVE_SINF",
+					"-Ilibmodplug/libmodplug",
+					"-DHAVE_SETENV",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.orospakr.ModPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libmodplug/ModPlug-Bridging-Header.h";
@@ -484,6 +490,12 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DHAVE_SINF",
+					"-Ilibmodplug/libmodplug",
+					"-DHAVE_SETENV",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.orospakr.ModPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libmodplug/ModPlug-Bridging-Header.h";
