@@ -10,8 +10,12 @@ import Foundation
 import Combine
 import AVFoundation
 
-class ModPlug: ObservableObject {
+class ModPlugPlayer: ObservableObject {
     var engine: AVAudioEngine?
+    
+    @Published var time: Double = 0.0
+    
+    @Published var title: String = ""
     
     func play() {
         let data: Data
@@ -32,6 +36,8 @@ class ModPlug: ObservableObject {
 //                ModPlug_Unload(mpgFile)
 //            }
             print("Mod file loaded!")
+            
+            self.title = String(cString: ModPlug_GetName(mpgFile))
             
             let inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 44100, channels: 2, interleaved: true)! // TODO: "interleaved"???
             
@@ -54,6 +60,9 @@ class ModPlug: ObservableObject {
                     // TODO: check read size result?
                     ModPlug_Read(mpgFile, buffer.mData, Int32(buffer.mDataByteSize))
                 }
+                
+                // TODO side-effect: dispatch time update.
+                
                 return noErr
             }
             

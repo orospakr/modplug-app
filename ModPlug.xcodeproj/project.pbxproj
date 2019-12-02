@@ -48,7 +48,10 @@
 		49DBB91E23921E2A00EBC759 /* load_mt2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB8FC23921E2A00EBC759 /* load_mt2.cpp */; };
 		49DBB92323921F3F00EBC759 /* libmodplug in Resources */ = {isa = PBXBuildFile; fileRef = 49DBB92223921F3F00EBC759 /* libmodplug */; };
 		49DBB9262392262300EBC759 /* DEADLOCK.XM in Resources */ = {isa = PBXBuildFile; fileRef = 49DBB9252392256800EBC759 /* DEADLOCK.XM */; };
-		49DBB9282392F95300EBC759 /* ModPlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9272392F95300EBC759 /* ModPlug.swift */; };
+		49DBB9282392F95300EBC759 /* ModPlugPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */; };
+		49DBB92B2394579700EBC759 /* LCDPixelArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92A2394579700EBC759 /* LCDPixelArt.swift */; };
+		49DBB92D2394590000EBC759 /* Cropped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92C2394590000EBC759 /* Cropped.swift */; };
+		49DBB92F2394B75F00EBC759 /* LCDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92E2394B75F00EBC759 /* LCDText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +106,10 @@
 		49DBB92223921F3F00EBC759 /* libmodplug */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libmodplug; sourceTree = "<group>"; };
 		49DBB9242392201C00EBC759 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		49DBB9252392256800EBC759 /* DEADLOCK.XM */ = {isa = PBXFileReference; lastKnownFileType = file; path = DEADLOCK.XM; sourceTree = "<group>"; };
-		49DBB9272392F95300EBC759 /* ModPlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModPlug.swift; sourceTree = "<group>"; };
+		49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModPlugPlayer.swift; sourceTree = "<group>"; };
+		49DBB92A2394579700EBC759 /* LCDPixelArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDPixelArt.swift; sourceTree = "<group>"; };
+		49DBB92C2394590000EBC759 /* Cropped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cropped.swift; sourceTree = "<group>"; };
+		49DBB92E2394B75F00EBC759 /* LCDText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		49DBB8C223921D6100EBC759 /* ModPlug */ = {
 			isa = PBXGroup;
 			children = (
+				49DBB9292394577200EBC759 /* PlayerWindow */,
 				49DBB8C323921D6100EBC759 /* AppDelegate.swift */,
 				49DBB8C523921D6100EBC759 /* ContentView.swift */,
 				49DBB8C723921D6200EBC759 /* Assets.xcassets */,
@@ -145,7 +152,7 @@
 				49DBB8CF23921D6200EBC759 /* Info.plist */,
 				49DBB8D023921D6200EBC759 /* ModPlug.entitlements */,
 				49DBB8C923921D6200EBC759 /* Preview Content */,
-				49DBB9272392F95300EBC759 /* ModPlug.swift */,
+				49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */,
 			);
 			path = ModPlug;
 			sourceTree = "<group>";
@@ -205,6 +212,16 @@
 				49DBB8D723921E2800EBC759 /* ModPlug-Bridging-Header.h */,
 			);
 			path = libmodplug;
+			sourceTree = "<group>";
+		};
+		49DBB9292394577200EBC759 /* PlayerWindow */ = {
+			isa = PBXGroup;
+			children = (
+				49DBB92A2394579700EBC759 /* LCDPixelArt.swift */,
+				49DBB92C2394590000EBC759 /* Cropped.swift */,
+				49DBB92E2394B75F00EBC759 /* LCDText.swift */,
+			);
+			path = PlayerWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +306,12 @@
 				49DBB91023921E2A00EBC759 /* load_mdl.cpp in Sources */,
 				49DBB90D23921E2A00EBC759 /* fastmix.cpp in Sources */,
 				49DBB90223921E2A00EBC759 /* load_669.cpp in Sources */,
+				49DBB92F2394B75F00EBC759 /* LCDText.swift in Sources */,
 				49DBB90C23921E2A00EBC759 /* mmcmp.cpp in Sources */,
 				49DBB90923921E2A00EBC759 /* load_ptm.cpp in Sources */,
 				49DBB91723921E2A00EBC759 /* load_abc.cpp in Sources */,
 				49DBB91E23921E2A00EBC759 /* load_mt2.cpp in Sources */,
+				49DBB92D2394590000EBC759 /* Cropped.swift in Sources */,
 				49DBB91A23921E2A00EBC759 /* load_mtm.cpp in Sources */,
 				49DBB91D23921E2A00EBC759 /* load_med.cpp in Sources */,
 				49DBB90F23921E2A00EBC759 /* snd_dsp.cpp in Sources */,
@@ -307,6 +326,7 @@
 				49DBB90B23921E2A00EBC759 /* load_it.cpp in Sources */,
 				49DBB90523921E2A00EBC759 /* load_psm.cpp in Sources */,
 				49DBB90023921E2A00EBC759 /* snd_flt.cpp in Sources */,
+				49DBB92B2394579700EBC759 /* LCDPixelArt.swift in Sources */,
 				49DBB91C23921E2A00EBC759 /* load_mod.cpp in Sources */,
 				49DBB91123921E2A00EBC759 /* load_dbm.cpp in Sources */,
 				49DBB90623921E2A00EBC759 /* load_stm.cpp in Sources */,
@@ -317,7 +337,7 @@
 				49DBB90E23921E2A00EBC759 /* load_ams.cpp in Sources */,
 				49DBB8FD23921E2A00EBC759 /* load_s3m.cpp in Sources */,
 				49DBB90823921E2A00EBC759 /* snd_fx.cpp in Sources */,
-				49DBB9282392F95300EBC759 /* ModPlug.swift in Sources */,
+				49DBB9282392F95300EBC759 /* ModPlugPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
