@@ -13,7 +13,7 @@ import AVFoundation
 class ModPlugPlayer: ObservableObject {
     var engine: AVAudioEngine?
     
-    @Published var time: Double = 0.0
+    @Published var time: Int = 0
     
     @Published var title: String = ""
     
@@ -62,6 +62,10 @@ class ModPlugPlayer: ObservableObject {
                 }
                 
                 // TODO side-effect: dispatch time update.
+                let currentTime = ModPlug_GetCurrentPos(mpgFile)
+                DispatchQueue.main.async {
+                    self.time = Int(currentTime)
+                }
                 
                 return noErr
             }

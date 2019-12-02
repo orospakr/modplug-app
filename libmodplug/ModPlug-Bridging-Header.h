@@ -3,4 +3,4 @@
 //
 
 #include "modplug.h"
-
+#include "modplug_extra_api.hpp"

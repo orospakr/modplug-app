@@ -52,6 +52,7 @@
 		49DBB92B2394579700EBC759 /* LCDPixelArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92A2394579700EBC759 /* LCDPixelArt.swift */; };
 		49DBB92D2394590000EBC759 /* Cropped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92C2394590000EBC759 /* Cropped.swift */; };
 		49DBB92F2394B75F00EBC759 /* LCDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92E2394B75F00EBC759 /* LCDText.swift */; };
+		49DBB9352394C1DD00EBC759 /* modplug_extra_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		49DBB92A2394579700EBC759 /* LCDPixelArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDPixelArt.swift; sourceTree = "<group>"; };
 		49DBB92C2394590000EBC759 /* Cropped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cropped.swift; sourceTree = "<group>"; };
 		49DBB92E2394B75F00EBC759 /* LCDText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDText.swift; sourceTree = "<group>"; };
+		49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modplug_extra_api.cpp; sourceTree = "<group>"; };
+		49DBB9342394C1DD00EBC759 /* modplug_extra_api.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modplug_extra_api.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				49DBB8D023921D6200EBC759 /* ModPlug.entitlements */,
 				49DBB8C923921D6200EBC759 /* Preview Content */,
 				49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */,
+				49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */,
+				49DBB9342394C1DD00EBC759 /* modplug_extra_api.hpp */,
 			);
 			path = ModPlug;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				49DBB91C23921E2A00EBC759 /* load_mod.cpp in Sources */,
 				49DBB91123921E2A00EBC759 /* load_dbm.cpp in Sources */,
 				49DBB90623921E2A00EBC759 /* load_stm.cpp in Sources */,
+				49DBB9352394C1DD00EBC759 /* modplug_extra_api.cpp in Sources */,
 				49DBB90A23921E2A00EBC759 /* load_okt.cpp in Sources */,
 				49DBB8FF23921E2A00EBC759 /* load_dmf.cpp in Sources */,
 				49DBB8C423921D6100EBC759 /* AppDelegate.swift in Sources */,
