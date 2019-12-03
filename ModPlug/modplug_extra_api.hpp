@@ -18,6 +18,7 @@ extern "C" {
 #endif
 
 unsigned int ModPlug_GetCurrentPos(ModPlugFile* file);
+unsigned int ModPlug_GetMaxPosition(ModPlugFile* file);
 
 #ifdef __cplusplus
 } /* extern "C" */

@@ -19,3 +19,7 @@ struct _ModPlugFile
 unsigned int ModPlug_GetCurrentPos(ModPlugFile* file) {
     return file->mSoundFile.GetCurrentPos();
 }
+
+unsigned int ModPlug_GetMaxPosition(ModPlugFile* file) {
+    return file->mSoundFile.GetMaxPosition();
+}

@@ -13,7 +13,8 @@ import AVFoundation
 class ModPlugPlayer: ObservableObject {
     var engine: AVAudioEngine?
     
-    @Published var time: Int = 0
+    /// Current time in seconds.
+    @Published var time: Double = 0
     
     @Published var title: String = ""
     
@@ -37,9 +38,16 @@ class ModPlugPlayer: ObservableObject {
 //            }
             print("Mod file loaded!")
             
+            let maxLengthSeconds = ModPlug_GetLength(mpgFile)
+            let maxPos = ModPlug_GetMaxPosition(mpgFile)
+            
+            // seconds consumed per pos.
+            let posTime: Double = Double(maxLengthSeconds) / Double(maxPos)
+            
+            
             self.title = String(cString: ModPlug_GetName(mpgFile))
             
-            let inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 44100, channels: 2, interleaved: true)! // TODO: "interleaved"???
+            let inputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 44100, channels: 2, interleaved: true)!
             
             let engine = AVAudioEngine()
             self.engine = engine
@@ -62,9 +70,10 @@ class ModPlugPlayer: ObservableObject {
                 }
                 
                 // TODO side-effect: dispatch time update.
-                let currentTime = ModPlug_GetCurrentPos(mpgFile)
+                let currentPosition = ModPlug_GetCurrentPos(mpgFile)
                 DispatchQueue.main.async {
-                    self.time = Int(currentTime)
+                    // TODO: this time calculation is very approximate, and shows noticable artifacts as tempo changes occur. better to dead-reckon time using audio playback from latest seek-or-start event.
+                    self.time = Double(currentPosition) * posTime
                 }
                 
                 return noErr
