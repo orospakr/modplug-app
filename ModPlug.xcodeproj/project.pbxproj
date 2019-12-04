@@ -56,7 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49DBB8C023921D6100EBC759 /* ModPlug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModPlug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DBB8C023921D6100EBC759 /* ModPlug Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ModPlug Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DBB8C323921D6100EBC759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DBB8C523921D6100EBC759 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49DBB8C723921D6200EBC759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		49DBB8C123921D6100EBC759 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49DBB8C023921D6100EBC759 /* ModPlug.app */,
+				49DBB8C023921D6100EBC759 /* ModPlug Player.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49DBB8BF23921D6100EBC759 /* ModPlug */ = {
+		49DBB8BF23921D6100EBC759 /* ModPlug Player */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49DBB8D323921D6200EBC759 /* Build configuration list for PBXNativeTarget "ModPlug" */;
+			buildConfigurationList = 49DBB8D323921D6200EBC759 /* Build configuration list for PBXNativeTarget "ModPlug Player" */;
 			buildPhases = (
 				49DBB8BC23921D6100EBC759 /* Sources */,
 				49DBB8BD23921D6100EBC759 /* Frameworks */,
@@ -244,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = ModPlug;
+			name = "ModPlug Player";
 			productName = ModPlug;
-			productReference = 49DBB8C023921D6100EBC759 /* ModPlug.app */;
+			productReference = 49DBB8C023921D6100EBC759 /* ModPlug Player.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +278,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49DBB8BF23921D6100EBC759 /* ModPlug */,
+				49DBB8BF23921D6100EBC759 /* ModPlug Player */,
 			);
 		};
 /* End PBXProject section */
@@ -549,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49DBB8D323921D6200EBC759 /* Build configuration list for PBXNativeTarget "ModPlug" */ = {
+		49DBB8D323921D6200EBC759 /* Build configuration list for PBXNativeTarget "ModPlug Player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49DBB8D423921D6200EBC759 /* Debug */,
