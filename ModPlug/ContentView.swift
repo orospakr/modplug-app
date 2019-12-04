@@ -45,18 +45,30 @@ struct ContentView: View {
                 LCDText(text: (player.info?.title) ?? "")
             )
 //                .antialiased(false)
-            Button(action: {
+            HStack {
+                Button(action: {
 
-                let path = Bundle.main.path(forResource: "DEADLOCK", ofType: "XM")!
-                let url =  URL(fileURLWithPath: path)
-                
-                self.player.currentFile = url
-                self.player.state = .stopped
-                self.player.state = .playing
-            }, label: {
-                Text("play")
-            })
+                    let path = Bundle.main.path(forResource: "DEADLOCK", ofType: "XM")!
+                    let url =  URL(fileURLWithPath: path)
+                    
+                    self.player.currentFile = url
+                    self.player.state = .stopped
+                    self.player.state = .playing
+                }, label: {
+                    Text("Play").foregroundColor(
+                        self.player.state == .playing ? Color.green : Color.primary
+                    )
+                })
+                Button(action: {
+                    self.player.state = .stopped
+                }, label: {
+                    Text("Stop").foregroundColor(
+                        self.player.state == .stopped || self.player.state == .none ? Color.green : Color.primary
+                    )
+                })
+            }
         }
+        
            //  .frame(width: 418, height: 177) with spectrum analyzer
 //            .frame(width: 418, height: 128)
     }

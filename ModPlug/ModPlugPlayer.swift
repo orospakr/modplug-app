@@ -36,7 +36,7 @@ class ModPlugPlayer: ObservableObject {
     
     private var modplugFile: OpaquePointer? // Type ModPlugFile, see modplug.h
     
-    public var state: PlayerState = .none {
+    @Published public var state: PlayerState = .none {
         // How do I handle async state transitions, like loading? also I want to hide the State from consumer so that needs action methods.
                        
        // at some point, maybe I do just want to use composable architecture for a better async story.  Also that would allow constraining certain state values to only be available in certain states, rather than optionals. also I have a bit of a semantic differences between the states and the "actions" i want to bring us to those states.
@@ -51,12 +51,16 @@ class ModPlugPlayer: ObservableObject {
                 play()
             case (.playing, .stopped):
                 engine?.stop()
+                ModPlug_Seek(modplugFile, 0)
             case (.playing, .none):
                 engine?.stop()
                 self.modplugFile = nil
                 self.info = nil
             default:
-                assertionFailure("Unsupported transition: \((state, newValue))")
+                // be nice and allow no-ops.
+                if state != newValue {
+                    assertionFailure("Unsupported transition: \((state, newValue))")
+                }
             }
         }
     }
