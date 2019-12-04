@@ -53,6 +53,7 @@
 		49DBB92D2394590000EBC759 /* Cropped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92C2394590000EBC759 /* Cropped.swift */; };
 		49DBB92F2394B75F00EBC759 /* LCDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB92E2394B75F00EBC759 /* LCDText.swift */; };
 		49DBB9352394C1DD00EBC759 /* modplug_extra_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */; };
+		49DBB9582397743900EBC759 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB9572397743900EBC759 /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		49DBB92E2394B75F00EBC759 /* LCDText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDText.swift; sourceTree = "<group>"; };
 		49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modplug_extra_api.cpp; sourceTree = "<group>"; };
 		49DBB9342394C1DD00EBC759 /* modplug_extra_api.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modplug_extra_api.hpp; sourceTree = "<group>"; };
+		49DBB9572397743900EBC759 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */,
 				49DBB9332394C1DD00EBC759 /* modplug_extra_api.cpp */,
 				49DBB9342394C1DD00EBC759 /* modplug_extra_api.hpp */,
+				49DBB9572397743900EBC759 /* Document.swift */,
 			);
 			path = ModPlug;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				49DBB91923921E2A00EBC759 /* load_dsm.cpp in Sources */,
 				49DBB91823921E2A00EBC759 /* load_ult.cpp in Sources */,
 				49DBB90B23921E2A00EBC759 /* load_it.cpp in Sources */,
+				49DBB9582397743900EBC759 /* Document.swift in Sources */,
 				49DBB90523921E2A00EBC759 /* load_psm.cpp in Sources */,
 				49DBB90023921E2A00EBC759 /* snd_flt.cpp in Sources */,
 				49DBB92B2394579700EBC759 /* LCDPixelArt.swift in Sources */,
