@@ -31,7 +31,7 @@ struct ContentView: View {
     @EnvironmentObject var player: ModPlugPlayer
     
     var body: some View {
-        let time = Int(player.time / 1000)
+        let time = Int(player.positionSeconds / 1000)
         let secs = time % 60
         let mins = time / 60
         
@@ -42,11 +42,17 @@ struct ContentView: View {
     
         return VStack {
             SocketedPlayerPanel(min10: min10, min: min, sec10: sec10, sec: sec).overlay(
-                LCDText(text: player.title)
+                LCDText(text: (player.info?.title) ?? "")
             )
 //                .antialiased(false)
             Button(action: {
-                self.player.play()
+
+                let path = Bundle.main.path(forResource: "DEADLOCK", ofType: "XM")!
+                let url =  URL(fileURLWithPath: path)
+                
+                self.player.currentFile = url
+                self.player.state = .stopped
+                self.player.state = .playing
             }, label: {
                 Text("play")
             })
