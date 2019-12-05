@@ -10,6 +10,8 @@ import Cocoa
 import SwiftUI
 
 class Document: NSDocument {
+    
+    private var player = ModPlugPlayer()
 
     override init() {
         super.init()
@@ -23,7 +25,7 @@ class Document: NSDocument {
     override func makeWindowControllers() {
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
-            .environmentObject(ModPlugPlayer())
+            .environmentObject(player)
 
         // Create the window and set the content view.
         let window = NSWindow(
@@ -46,7 +48,9 @@ class Document: NSDocument {
         // Insert code here to read your document from the given data of the specified type, throwing an error in case of failure.
         // Alternatively, you could remove this method and override read(from:ofType:) instead.
         // If you do, you should also override isEntireFileLoaded to return false if the contents are lazily loaded.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        player.currentFile = data
+        
+//        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
 
 

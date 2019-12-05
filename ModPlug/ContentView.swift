@@ -48,10 +48,10 @@ struct ContentView: View {
             HStack {
                 Button(action: {
 
-                    let path = Bundle.main.path(forResource: "DEADLOCK", ofType: "XM")!
-                    let url =  URL(fileURLWithPath: path)
-                    
-                    self.player.currentFile = url
+//                    let path = Bundle.main.path(forResource: "DEADLOCK", ofType: "XM")!
+//                    let url =  URL(fileURLWithPath: path)
+//
+//                    self.player.currentFile = url
                     self.player.state = .stopped
                     self.player.state = .playing
                 }, label: {

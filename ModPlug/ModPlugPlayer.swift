@@ -32,7 +32,8 @@ class ModPlugPlayer: ObservableObject {
     private var engine: AVAudioEngine?
     
     /// File to open (next time going from none to stopped)
-    var currentFile: URL?
+//    var currentFile: URL?
+    var currentFile: Data?
     
     private var modplugFile: OpaquePointer? // Type ModPlugFile, see modplug.h
     
@@ -46,7 +47,7 @@ class ModPlugPlayer: ObservableObject {
                 guard let currentFile = self.currentFile else {
                     return
                 }
-                load(url: currentFile)
+                load(data: currentFile)
             case (.stopped, .playing):
                 play()
             case (.playing, .stopped):
@@ -65,14 +66,7 @@ class ModPlugPlayer: ObservableObject {
         }
     }
     
-    private func load(url: URL) {
-        let data: Data
-        do {
-            data = try Data(contentsOf: url)
-        } catch {
-            print(error)
-            return
-        }
+    private func load(data: Data) {
         data.withUnsafeBytes { modData in
             // I think I am using memory here that I am not entitled to out of scope of this withUnsafeBytes (I don't think it is copied).
             // if so, wrap both the opaquepointer and a copy of the file's memory in a struct.

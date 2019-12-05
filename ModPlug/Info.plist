@@ -7,7 +7,11 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>mydoc</string>
+				<string>s3m</string>
+				<string>mod</string>
+				<string>xm</string>
+				<string>it</string>
+				<string>psm</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string></string>
