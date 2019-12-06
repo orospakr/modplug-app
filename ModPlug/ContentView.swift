@@ -31,7 +31,7 @@ struct ContentView: View {
     @EnvironmentObject var player: ModPlugPlayer
     
     var body: some View {
-        let time = Int(player.positionSeconds / 1000)
+        let time = player.positionSeconds
         let secs = time % 60
         let mins = time / 60
         

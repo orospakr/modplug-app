@@ -27,7 +27,7 @@ class ModPlugPlayer: ObservableObject {
     @Published var info: ModfileInfo?
     
     /// Current time in seconds.
-    @Published var positionSeconds: Double = 0
+    @Published var positionSeconds: Int = 0
 
     private var engine: AVAudioEngine?
     
@@ -148,7 +148,12 @@ class ModPlugPlayer: ObservableObject {
             let currentPosition = ModPlug_GetCurrentPos(modplugFile)
             DispatchQueue.main.async {
                 // TODO: this time calculation is very approximate, and shows noticable artifacts as tempo changes occur. better to dead-reckon time using audio playback from latest seek-or-start event.
-                self.positionSeconds = Double(currentPosition) * posTime
+                let newSecs = Int((Double(currentPosition) * posTime) / 1000)
+                
+                // for some reason, @Published leaks memory like crazy. Eliminate propagating unnecessary updates:
+                if self.positionSeconds != newSecs {
+                    self.positionSeconds = newSecs
+                }
             }
             
             return noErr
