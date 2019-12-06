@@ -10,9 +10,6 @@ import Cocoa
 import SwiftUI
 
 class Document: NSDocument {
-    
-    private var player = ModPlugPlayer()
-
     override init() {
         super.init()
         // Add your subclass-specific initialization here.
@@ -23,19 +20,7 @@ class Document: NSDocument {
     }
 
     override func makeWindowControllers() {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-            .environmentObject(player)
-
-        // Create the window and set the content view.
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.center()
-        window.contentView = NSHostingView(rootView: contentView)
-        let windowController = NSWindowController(window: window)
-        self.addWindowController(windowController)
+        // Using an SDI arrangement, so not making a View Controller here.
     }
 
     override func data(ofType typeName: String) throws -> Data {
@@ -48,11 +33,12 @@ class Document: NSDocument {
         // Insert code here to read your document from the given data of the specified type, throwing an error in case of failure.
         // Alternatively, you could remove this method and override read(from:ofType:) instead.
         // If you do, you should also override isEntireFileLoaded to return false if the contents are lazily loaded.
-        player.currentFile = data
+        
+        NSApplication.appDelegate.player.state = .none
+        NSApplication.appDelegate.player.currentFile = data
+        NSApplication.appDelegate.player.state = .stopped
+        NSApplication.appDelegate.player.state = .playing
         
 //        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
-
-
 }
-

@@ -63,10 +63,19 @@ class ModPlugPlayer: ObservableObject {
                     assertionFailure("Unsupported transition: \((state, newValue))")
                 }
             }
+            print("Transitioning from \(state) to \(newValue).")
         }
     }
     
     private func load(data: Data) {
+        engine?.stop()
+        
+        // TODO: figure out how to solve this leak and free the modplug file. I can't just do it here naiively because the audio callback may be running, and .stop() is naturally async.
+        
+//        if let existingFile = self.modplugFile {
+//            ModPlug_Unload(existingFile)
+//        }
+        
         data.withUnsafeBytes { modData in
             // I think I am using memory here that I am not entitled to out of scope of this withUnsafeBytes (I don't think it is copied).
             // if so, wrap both the opaquepointer and a copy of the file's memory in a struct.
