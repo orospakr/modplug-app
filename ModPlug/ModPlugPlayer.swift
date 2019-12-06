@@ -52,9 +52,14 @@ class ModPlugPlayer: ObservableObject {
                 play()
             case (.playing, .stopped):
                 engine?.stop()
-                ModPlug_Seek(modplugFile, 0)
+                if let modplugFile = modplugFile {
+                    ModPlug_Seek(modplugFile, 0)
+                }
             case (.playing, .none):
                 engine?.stop()
+                self.modplugFile = nil
+                self.info = nil
+            case (.stopped, .none):
                 self.modplugFile = nil
                 self.info = nil
             default:
