@@ -43,10 +43,8 @@ struct LCDLetter: View {
         
         return LCDLetterIndexed(xPosition: Int(xRow), yPosition: Int(yRow))
 //        return Text(String(format:"0x%02X", letterIndex))
-        
     }
 }
-
 
 struct LCDText: View {
     /// Only use characters that are ultimately valid in CP437 (basically latin-1-like characters).

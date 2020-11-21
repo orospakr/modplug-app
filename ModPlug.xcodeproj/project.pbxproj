@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49B5E9EE2569DE360066F9B4 /* ClassicPlayerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5E9ED2569DE360066F9B4 /* ClassicPlayerWindow.swift */; };
 		49DBB8C423921D6100EBC759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB8C323921D6100EBC759 /* AppDelegate.swift */; };
 		49DBB8C623921D6100EBC759 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBB8C523921D6100EBC759 /* ContentView.swift */; };
 		49DBB8C823921D6200EBC759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DBB8C723921D6200EBC759 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49B5E9ED2569DE360066F9B4 /* ClassicPlayerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicPlayerWindow.swift; sourceTree = "<group>"; };
 		49DBB8C023921D6100EBC759 /* ModPlug Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ModPlug Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DBB8C323921D6100EBC759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DBB8C523921D6100EBC759 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,10 +104,7 @@
 		49DBB8FA23921E2A00EBC759 /* load_mod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_mod.cpp; sourceTree = "<group>"; };
 		49DBB8FB23921E2A00EBC759 /* load_med.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_med.cpp; sourceTree = "<group>"; };
 		49DBB8FC23921E2A00EBC759 /* load_mt2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_mt2.cpp; sourceTree = "<group>"; };
-		49DBB91F23921EB600EBC759 /* it_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = it_defs.h; sourceTree = "<group>"; };
-		49DBB92023921EB600EBC759 /* sndfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sndfile.h; sourceTree = "<group>"; };
 		49DBB92223921F3F00EBC759 /* libmodplug */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libmodplug; sourceTree = "<group>"; };
-		49DBB9242392201C00EBC759 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		49DBB9272392F95300EBC759 /* ModPlugPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModPlugPlayer.swift; sourceTree = "<group>"; };
 		49DBB92A2394579700EBC759 /* LCDPixelArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDPixelArt.swift; sourceTree = "<group>"; };
 		49DBB92C2394590000EBC759 /* Cropped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cropped.swift; sourceTree = "<group>"; };
@@ -146,7 +145,7 @@
 		49DBB8C223921D6100EBC759 /* ModPlug */ = {
 			isa = PBXGroup;
 			children = (
-				49DBB9292394577200EBC759 /* PlayerWindow */,
+				49DBB9292394577200EBC759 /* ClassicPlayerWindow */,
 				49DBB8C323921D6100EBC759 /* AppDelegate.swift */,
 				49DBB8C523921D6100EBC759 /* ContentView.swift */,
 				49DBB8C723921D6200EBC759 /* Assets.xcassets */,
@@ -173,10 +172,7 @@
 		49DBB8D623921DE900EBC759 /* libmodplug */ = {
 			isa = PBXGroup;
 			children = (
-				49DBB9242392201C00EBC759 /* stdafx.h */,
 				49DBB92223921F3F00EBC759 /* libmodplug */,
-				49DBB91F23921EB600EBC759 /* it_defs.h */,
-				49DBB92023921EB600EBC759 /* sndfile.h */,
 				49DBB8EA23921E2900EBC759 /* fastmix.cpp */,
 				49DBB8DE23921E2900EBC759 /* load_669.cpp */,
 				49DBB8F523921E2A00EBC759 /* load_abc.cpp */,
@@ -219,14 +215,15 @@
 			path = libmodplug;
 			sourceTree = "<group>";
 		};
-		49DBB9292394577200EBC759 /* PlayerWindow */ = {
+		49DBB9292394577200EBC759 /* ClassicPlayerWindow */ = {
 			isa = PBXGroup;
 			children = (
 				49DBB92A2394579700EBC759 /* LCDPixelArt.swift */,
 				49DBB92C2394590000EBC759 /* Cropped.swift */,
 				49DBB92E2394B75F00EBC759 /* LCDText.swift */,
+				49B5E9ED2569DE360066F9B4 /* ClassicPlayerWindow.swift */,
 			);
-			path = PlayerWindow;
+			path = ClassicPlayerWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +338,7 @@
 				49DBB8C423921D6100EBC759 /* AppDelegate.swift in Sources */,
 				49DBB90723921E2A00EBC759 /* load_mid.cpp in Sources */,
 				49DBB90E23921E2A00EBC759 /* load_ams.cpp in Sources */,
+				49B5E9EE2569DE360066F9B4 /* ClassicPlayerWindow.swift in Sources */,
 				49DBB8FD23921E2A00EBC759 /* load_s3m.cpp in Sources */,
 				49DBB90823921E2A00EBC759 /* snd_fx.cpp in Sources */,
 				49DBB9282392F95300EBC759 /* ModPlugPlayer.swift in Sources */,
